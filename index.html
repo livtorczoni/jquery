@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head> 
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="icon" href="imgs/favicon.png" sizes="18x18">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Liv Torczon Interactive Poem -->
+
+		<title>Interactive Text - Liv Torczon</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+		<script>
+			// fade in, fade out
+			$(document).ready(function(){
+			  $(".revealio").click(function(){
+			    $("#div1").fadeToggle();
+			    $("#div2").fadeToggle(1000);
+			    $("#div3").fadeToggle(2000);
+			  });
+			});
+
+
+			//hover color
+			$(document).ready(function(){
+			  $(".hide-me").hover(function(){
+			    $(this).css("background-color", "rgba(255,87,51,.8)");
+			    }, function(){
+			    $(this).css("background-color", "white");
+			  });
+			});
+			
+			// make a thing disapeaar
+			$(document).ready(function(){
+			  $(".hide-me").on("click", function(){
+			    $(this).hide();
+			  });
+			});
+
+			//function to display the poem
+			let options = [
+				'the clouds go soft',
+				'change color and so many kinds',
+				'the heavens go out of kilter',
+				'sink into the sea',
+				'an insane remark greets',
+				'in a season of wit'
+			];
+
+			function displayPoems(){
+			
+				var randOptionNum = Math.floor(Math.random() * options.length);
+
+				document.getElementById('doThis').innerHTML = ''; // clear previous text 
+
+				document.getElementById('doThis').innerHTML = options[randOptionNum]; // enter text
+
+				//document.getElementById('doThis').innerHTML.fade
+
+			}
+
+			// tool-tip
+			$(function() {
+           	 $("#tooltip-1").tooltip();
+         	});
+
+         	$(function() {
+           	 $("#tooltip-2").tooltip();
+         	});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<main>
+
+			<h1>Interact with multiple poems</h1>
+			<h2>All poems are by <a href="https://www.poetryfoundation.org/poems/42670/ave-maria" target="_blank" class="inline-link">Frank O'Hara</a></h2>
+
+			<div class="poem example">
+
+				<h3>Reveal "The Clouds Go Soft," line by line</h3>
+
+				<button class="btn" onclick="displayPoems()">Click Me</button>
+
+				<p id="doThis"></p>
+
+			</div>
+
+			<div class="example">
+
+				<h3>Click to fade in/fade out three poems</h3>
+
+				<a class="revealio">REVEAL / HIDE</a>
+
+				<div class="reveal">
+
+					<div id="div1">
+						<h4>Ave Maria</h4>
+						<p>Mothers of America</p>
+						<p>let your kids go to the movies!</p>
+						<p>get them out of the house so they won’t know what you’re up to</p>
+						<p>it’s true that fresh air is good for the body</p>
+						<p>but what about the soul</p>
+						<p>that grows in darkness, embossed by silvery images</p>
+						<p>and when you grow old as grow old you must</p>
+						<p>they won’t hate you   </p>
+						<p>they won’t criticize you they won’t know</p>
+						<p>they’ll be in some glamorous country</p>
+						<p>they first saw on a Saturday afternoon or playing hookey</p>
+						<p>they may even be grateful to you</p>
+						<p>for their first sexual experience   </p>
+						<p>which only cost you a quarter</p>
+						<p>and didn’t upset the peaceful home</p>
+						<p>they will know where candy bars come from</p>
+						<p>and gratuitous bags of popcorn</p>
+						<p>as gratuitous as leaving the movie before it’s over</p>
+						<p>with a pleasant stranger whose apartment is in the Heaven on Earth Bldg  </p> 
+						<p>near the Williamsburg Bridge</p>
+						<p>oh mothers you will have made the little tykes</p>
+						<p>so happy because if nobody does pick them up in the movies  </p> 
+						<p>they won’t know the difference</p>
+						<p>and if somebody does it’ll be sheer gravy </p>  
+						<p>and they’ll have been truly entertained either way</p>
+						<p>instead of hanging around the yard</p>
+						<p>or up in their room</p>
+						<p>hating you</p>
+						<p>prematurely since you won’t have done anything horribly mean yet   </p>
+						<p>except keeping them from the darker joys</p>
+						<p>it’s unforgivable the</p>
+						<p>latter</p>
+						<p>so don’t blame me if you won’t take this advice</p>
+						<p>and the family</p>
+						<p>breaks up</p>
+						<p>and your children grow old and blind in front of a TV set</p>
+						<p>movies you wouldn’t let them see when they were young</p>
+						
+					</div>
+
+					<div id="div2">
+						<h4>The Day Lady Died</h4>
+
+						<p>It is 12:20 in New York a Friday</p>
+						<p>three days after Bastille day, yes</p>
+						<p>it is 1959 and I go get a shoeshine</p>
+						<p>because I will get off the 4:19 in Easthampton</p>
+						<p>at 7:15 and then go straight to dinner</p>
+						<p>and I don’t know the people who will feed me</p>
+						<p>After the first glass of vodka</p>
+						<p>you can accept just about anything</p>
+						<p>of life even your own mysteriousness</p>
+						<p>you think it is nice that a box</p>
+						<p>of matches is purple and brown</p>
+						<p>and is called</p>
+						<p>La Petite and comes from Sweden</p>
+						<p>for they are words that you know and that</p>
+						<p>is all you know words not their feelings</p>
+						<p>or what they mean</p>
+						<p>and you write because</p>
+						<p>you know them not because you understand them</p>
+						<p>because you don’t you are stupid and lazy</p>
+						<p>and will never be great but you do</p>
+						<p>what you know because what else is there?</p>
+
+					</div>
+					
+					<div id="div3">
+						<h4>1961</h4>
+						<p>oh god its wonderful</p>
+						<p>to get out of bed</p>
+						<p>and drink too much coffee</p>
+						<p>and smoke too many cigarettes</p>
+						<p>and love you so much</p>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="example">
+
+				<h3>Make your own poem by deleting a line of text.</h3>
+
+				<h4>BEWARE: Click on a line and it will be gone <span id="tooltip-1" class="red" title="FOREVER">forever.</span></h4>
+
+				<div class="hide">
+
+					<p class="hide-me">It is 12:20 in New York a Friday</p>
+					<p class="hide-me">three days after Bastille day, yes</p>
+					<p class="hide-me">it is 1959 and I go get a shoeshine</p>
+					<p class="hide-me">because I will get off the 4:19 in Easthampton</p>
+					<p class="hide-me">at 7:15 and then go straight to dinner</p>
+					<p class="hide-me">and I don’t know the people who will feed me</p>
+					<p class="hide-me">After the first glass of vodka</p>
+					<p class="hide-me">you can accept just about anything</p>
+					<p class="hide-me">of life even your own mysteriousness</p>
+					<p class="hide-me">you think it is nice that a box</p>
+					<p class="hide-me">of matches is purple and brown</p>
+					<p class="hide-me">and is called</p>
+					<p class="hide-me">La Petite and comes from Sweden</p>
+					<p class="hide-me">for they are words that you know and that</p>
+					<p class="hide-me">is all you know words not their feelings</p>
+					<p class="hide-me">or what they mean</p>
+					<p class="hide-me">and you write because</p>
+					<p class="hide-me">you know them not because you understand them</p>
+					<p class="hide-me">because you don’t you are stupid and lazy</p>
+					<p class="hide-me">and will never be great but you do</p>
+					<p class="hide-me">what you know because what else is there?</p>
+
+				</div>
+			</div>
+
+		</main>
+
+		<footer>
+			<p>All poems by <a href="https://www.poetryfoundation.org/poems/42670/ave-maria" target="_blank">Frank O'Hara</a></p>
+
+		</footer>
+
+	</body>
+
+</html>
